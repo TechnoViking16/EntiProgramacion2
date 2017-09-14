@@ -48,6 +48,29 @@ void main() {
 	std::priority_queue<int> pque2;
 	pque2 = pque1;
 	std::cout << std::endl;
+
+	while (pque2.size() > 0) {	//Imprime 2019 2018 2017
+		std::cout << pque2.top();
+		pque2.pop();
+		std::cout << " ";
+	}
+
+	//STACK
+	std::stack<int> st1;
+	st1.push(6);
+	st1.push(7);
+	st1.push(9);
+
+	std::stack<int> st2;
+	std::cout << std::endl;
+
+
+	st2 = st1;
+	while (st2.size() > 0) {
+		std::cout << st2.top();	//Imprime 976
+		st2.pop();
+	}
+
 	
 
 }
