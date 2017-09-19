@@ -9,15 +9,15 @@
 #include <set>
 
 void main() {
+
 	//Que contenedores soportan el uso del operador (=) entre sus objetos
 	//VECTOR
 	std::vector<int> v1({ 1,2,3 });
 	std::vector<int> v2;
 	v2 = v1;
-
-	for (int i = 0; i < v2.size(); i++) 
+	for (int i = 0; i < v2.size(); i++) {
 		std::cout << v2[i];	//Imprime 123
-	
+	}
 
 	//DEQUE
 	std::deque<int> deq1({ 3,2,1 });
@@ -27,6 +27,7 @@ void main() {
 	for (int i = 0; i < deq2.size(); i++) {
 		std::cout << deq2[i];	//Imprime 321
 	}
+	
 
 	//QUEUE
 	std::deque<int> que1({9,8,7});
@@ -46,7 +47,6 @@ void main() {
 	std::priority_queue<int> pque2;
 	pque2 = pque1;
 	std::cout << std::endl;
-
 	while (pque2.size() > 0) {	//Imprime 2019 2018 2017
 		std::cout << pque2.top();
 		pque2.pop();
@@ -55,14 +55,11 @@ void main() {
 
 	//STACK
 	std::stack<int> st1;
-	
 	st1.push(6);
 	st1.push(7);
 	st1.push(9);
-
 	std::stack<int> st2;
 	std::cout << std::endl;
-
 	st2 = st1;
 	while (st2.size() > 0) {
 		std::cout << st2.top();	//Imprime 976
@@ -103,6 +100,8 @@ void main() {
 	segundo = primero;
 	
 
+/*
+
 	//Testeo de los diferentes constructores de cada contenedor
 	//VECTOR
 	std::vector<int> primero;			//Vector de ints vacío
@@ -118,7 +117,9 @@ void main() {
 
 	//QUEUE
 	std::queue<int> primerQue;				//Queue de ints vacío
-	std::queue<int> segundoQue(primerQue);	//Una copia del primero
+	std::queue<int> segundoQue(primerQue);	//Una copia del 
+
+	*/
 
 	
 
